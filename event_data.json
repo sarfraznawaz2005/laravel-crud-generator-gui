@@ -1,0 +1,5 @@
+{
+    "modelName": "post",
+    "tableName": "posts",
+    "nsModel": "App\\Models"
+}
