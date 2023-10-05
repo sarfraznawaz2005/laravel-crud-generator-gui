@@ -2,10 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Auth::routes();
-
 Route::get('/', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder')
    ->name('io_generator_builder');
 Route::get('field_template', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@fieldTemplate')
@@ -18,7 +14,3 @@ Route::post('generator_builder/rollback', '\InfyOm\GeneratorBuilder\Controllers\
    ->name('io_generator_builder_rollback');
 Route::post('generator_builder/generate-from-file','\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generateFromFile')
    ->name('io_generator_builder_generate_from_file');
-
-
-
-
