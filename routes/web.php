@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder')
