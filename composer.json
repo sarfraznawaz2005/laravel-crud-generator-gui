@@ -7,13 +7,10 @@
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
-        "infyomlabs/laravel-ui-adminlte": "^5.1",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "yajra/laravel-datatables-buttons": "9.0",
-        "yajra/laravel-datatables-html": "9.0",
-        "yajra/laravel-datatables-oracle": "10.0"
+        "laravel/ui": "^4.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -22,11 +19,7 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0",
-        "infyomlabs/laravel-generator": "^5.0",
-        "infyomlabs/adminlte-templates": "^5.0",
-        "infyomlabs/generator-builder": "^1.0",
-        "doctrine/dbal": "~2.3"
+        "spatie/laravel-ignition": "^1.0"
     },
     "autoload": {
         "psr-4": {
