@@ -387,6 +387,7 @@
                     contentType: 'application/json',
                     data: JSON.stringify(data),
                     success: function (result) {
+                        /*
                         $("#info").html("");
                         $("#info").append('<div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>' + result + '</strong></div>');
                         $("#info").show();
@@ -395,7 +396,8 @@
                         $container.animate({scrollTop: $scrollTo.offset().top - $container.offset().top, scrollLeft: 0},300);
                         setTimeout(function () {
                             $('#info').fadeOut('fast');
-                        }, 3000);
+                        }, 5000);
+                        */
                         location.reload();
                     },
                     error: function (result) {
@@ -413,7 +415,7 @@
                         $container.animate({ scrollTop: $scrollTo.offset().top}, 300);
                         setTimeout(function () {
                             $('#info').fadeOut('fast');
-                        }, 3000);
+                        }, 5000);
                     }
                 });
 
