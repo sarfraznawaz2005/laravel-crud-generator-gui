@@ -398,7 +398,11 @@
                             $('#info').fadeOut('fast');
                         }, 5000);
                         */
-                        location.reload();
+
+                       setTimeout(function () {
+                            location.reload();
+                        }, 1000);
+                        
                     },
                     error: function (result) {
                         var result = JSON.parse(JSON.stringify(result));

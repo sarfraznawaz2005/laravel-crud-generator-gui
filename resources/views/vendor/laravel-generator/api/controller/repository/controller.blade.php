@@ -10,10 +10,9 @@ use {{ $config->namespaces->model }}\{{ $config->modelNames->name }};
 use {{ $config->namespaces->repository }}\{{ $config->modelNames->name }}Repository;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use {{ $config->namespaces->app }}\Http\Controllers\AppBaseController;
 
 {!! $docController !!}
-class {{ $config->modelNames->name }}APIController extends AppBaseController
+class {{ $config->modelNames->name }}APIController extends Controller
 {
     private {{ $config->modelNames->name }}Repository ${{ $config->modelNames->camel }}Repository;
 

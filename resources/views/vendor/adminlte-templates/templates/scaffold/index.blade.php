@@ -27,7 +27,7 @@
 
     <div class="content px-3">
 
-        @@include('flash::message')
+        <!-- include flash message here -->
 
         <div class="clearfix"></div>
 

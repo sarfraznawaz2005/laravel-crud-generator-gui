@@ -19,7 +19,7 @@
 
     <div class="content px-3">
 
-        @@include('adminlte-templates::common.errors')
+        <!-- include common errors template here -->
 
         <div class="card">
 

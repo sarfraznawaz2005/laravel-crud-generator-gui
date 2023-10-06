@@ -7,12 +7,11 @@ namespace {{ config('laravel_generator.namespace.controller') }};
 use {{ config('laravel_generator.namespace.request') }}\CreateUserRequest;
 use {{ config('laravel_generator.namespace.request') }}\UpdateUserRequest;
 use {{ config('laravel_generator.namespace.repository') }}\UserRepository;
-use {{ config('laravel_generator.namespace.controller') }}\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Hash;
 
-class UserController extends AppBaseController
+class UserController extends Controller
 {
     /** @var $userRepository UserRepository */
     private $userRepository;

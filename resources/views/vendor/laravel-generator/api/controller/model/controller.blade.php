@@ -9,10 +9,9 @@ use {{ $config->namespaces->apiRequest }}\Update{{ $config->modelNames->name }}A
 use {{ $config->namespaces->model }}\{{ $config->modelNames->name }};
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use {{ $config->namespaces->app }}\Http\Controllers\AppBaseController;
 
 {!! $docController !!}
-class {{ $config->modelNames->name }}APIController extends AppBaseController
+class {{ $config->modelNames->name }}APIController extends Controller
 {
     {!! $docIndex !!}
     public function index(Request $request): JsonResponse
