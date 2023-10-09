@@ -218,6 +218,42 @@
 
             </div>
         </div>
+
+        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal" style="position: absolute; bottom: 20px; left: 20px;">
+            <i class="fa fa-info"></i>
+        </button>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Information</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            This app lets you generate complete CRUD functionality. Once files are generated, 
+                            you can simply copy to your project. You will need to add following composer packages
+                            to your laravel project:
+                            <ul>
+                                <li>laravelcollective/html</li>
+                                <li>laracasts/flash</li>
+                            </ul>
+                            <hr>
+                            For more details, check out original docs <a href="https://infyom.com/open-source/laravelgenerator/docs/fields-input-guide" target="__blank">here</a>.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </section>
 </div>
 
