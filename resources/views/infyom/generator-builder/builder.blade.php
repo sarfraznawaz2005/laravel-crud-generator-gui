@@ -242,6 +242,10 @@
                                 <li>laravelcollective/html</li>
                                 <li>laracasts/flash</li>
                             </ul>
+                            <br>
+                            Note 1: You should also have Bootstrap added to your project.
+                            <br>
+                            Note 2: If you want to use DataTables, you must setup DataTables too, check <a href="https://infyom.com/open-source/laravelgenerator/docs/generator-options#datatables" target="__blank">this</a>.
                             <hr>
                             For more details, check out original docs <a href="https://infyom.com/open-source/laravelgenerator/docs/fields-input-guide" target="__blank">here</a>.
                         </p>
@@ -356,6 +360,9 @@
             $("#form").on("submit", function () {
                 var fieldArr = [];
                 var relationFieldArr = [];
+
+                $("#btnGenerate").prop('disabled', true);
+
                 $('.item').each(function () {
 
                     var htmlType = $(this).find('.drdHtmlType');
@@ -435,14 +442,20 @@
                         }, 5000);
                         */
 
+                        /*
                        setTimeout(function () {
                             location.reload();
                         }, 1000);
+                        */
+
+                        //$("#form")[0].reset();
+                        $("#btnGenerate").prop('disabled', false);
                         
                     },
                     error: function (result) {
                         var result = JSON.parse(JSON.stringify(result));
                         var errorMessage = '';
+                        
                         if (result.hasOwnProperty('responseJSON') && result.responseJSON.hasOwnProperty('message')) {
                             errorMessage = result.responseJSON.message;
                         }
@@ -450,9 +463,13 @@
                         $("#info").html("");
                         $("#info").append('<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Fail! </strong>' + errorMessage + '</div>');
                         $("#info").show();
+                        
                         var $container = $("html,body");
                         var $scrollTo = $('#info');
                         $container.animate({ scrollTop: $scrollTo.offset().top}, 300);
+                        
+                        $("#btnGenerate").prop('disabled', false);
+
                         setTimeout(function () {
                             $('#info').fadeOut('fast');
                         }, 5000);

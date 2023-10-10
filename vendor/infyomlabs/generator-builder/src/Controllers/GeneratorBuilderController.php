@@ -52,12 +52,28 @@ class GeneratorBuilderController extends Controller
             $data = $this->prepareRelationshipData($data);
         }
 
+        //return Response::json($data);
+
+
+        if ($data['addOns']['datatables'] === true) {
+            config(['laravel_generator.tables' => 'datatables']);
+        }
+
+        if ($data['addOns']['tests'] === true) {
+            config(['laravel_generator.options.tests' => true]);
+        }
+
+        if ($data['options']['softDelete'] === true) {
+            config(['laravel_generator.options.soft_delete' => true]);
+        }
+        
         $res = Artisan::call($data['commandType'], [
             'model'         => $data['modelName'],
             '--jsonFromGUI' => json_encode($data),
         ]);
 
         //return Response::json(Artisan::output());
+        //return Response::json(config('laravel_generator.options.soft_delete'));
 
         if (session()->has('generated_files')) {
             $files = session('generated_files');
@@ -83,7 +99,7 @@ class GeneratorBuilderController extends Controller
                 @unlink($file);
             }
 
-            return response()->download($zipFileName)->deleteFileAfterSend(true);
+            return response()->download($zipFileName);
         }
 
         return false;
